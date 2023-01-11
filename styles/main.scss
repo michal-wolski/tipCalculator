@@ -9,7 +9,7 @@ $breakpointTabletMax: 1023px;
 $breakpointDesktopMin: 1024px;
 //Colors
 $secoundColor: hsl(172, 67%, 45%);
-$primeColor: hsl(183, 100%, 15%);
+$primeColor: hsl(184, 100%, 10%);
 $DarkGrayishCyan: hsl(186, 14%, 43%);
 $GrayishCyan: hsl(184, 14%, 56%);
 $background: hsl(185, 41%, 84%);
@@ -17,6 +17,11 @@ $VeryLightGrayishCyan: hsl(189, 41%, 97%);
 $White: hsl(0, 0%, 100%);
 * {
   font-family: "Space Mono", monospace;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 body {
   background-color: $background;
@@ -41,4 +46,25 @@ body {
   background-color: $White;
   border-radius: 10px;
   padding: 20px 20px;
+}
+.billTitle {
+  color: $primeColor;
+}
+.billInput {
+  color: $primeColor;
+  background-color: $background;
+  background-image: url(../images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 10px;
+  width: 100%;
+  height: 30px;
+  border: 0;
+  border-radius: 3px;
+  text-align: right;
+  font-size: large;
+  margin-bottom: 20px;
+}
+.billInput:focus {
+  outline: $primeColor solid 2px;
 }
